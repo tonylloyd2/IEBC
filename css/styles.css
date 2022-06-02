@@ -1,0 +1,21 @@
+#text{
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 80%;
+}
+#button{
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+}
+#box{
+    background-color: grey;
+    margin: auto;
+    width: 300px;
+    padding: 40px;
+    /* position: center; */
+}
