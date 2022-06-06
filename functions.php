@@ -171,7 +171,7 @@ function user_password_update($connectdb){
 
 
   if(mysqli_num_rows($result_id) == 1){
-    $myfile = fopen("databases/voters/test.txt", "a") or die("Unable to open file!");
+    $myfile = fopen("../../databases/voters/test.txt", "a") or die("Unable to open file!");
     $user_data = mysqli_fetch_assoc($result_id);
 
     if($user_data['national_id'] === $national_id){

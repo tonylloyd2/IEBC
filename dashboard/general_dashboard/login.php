@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "databases/connectdb.php";
-include  "functions.php";
+include "../../databases/connectdb.php";
+include  "../../functions.php";
 
 if(isset($_POST['login'])){
 

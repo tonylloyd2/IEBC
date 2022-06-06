@@ -13,21 +13,21 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class="active ">
-            <a href="./user_dashboard.php">
+            <a href="../docs/documentation.php">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p>Homepage</p>
             </a>
           </li>
           <li>
-            <a href="./user.php">
+            <a href="./user_login.php">
               <i class="now-ui-icons users_single-02"></i>
-              <p>my Profile</p>
+              <p>Sign in</p>
             </a>
           </li>
           <li>
-            <a href="./notifications.php">
+            <a href="./user_signup.php">
               <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
+              <p>Sign up</p>
             </a>
           </li>
           <li>

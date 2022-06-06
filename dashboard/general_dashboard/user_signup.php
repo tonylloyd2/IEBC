@@ -186,48 +186,6 @@ if(isset($_POST['signup'])){
 
             </div>
           </div>
-          <!-- <div class="col-md-4">
-            <div class="card card-user">
-              <div class="image">
-              <div class="dropdown" style="padding-left:90%; align-item:center">
-                  <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
-                    <i class="now-ui-icons loader_gear"  ></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right" >
-                  <button class=""  style="width:100% ; color:red ;border:unset; text-align:start" name="image">Change Profile picture</button>                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-              <div class="author">
-                  <a href="#">
-                    <img class="avatar border-gray" src="<?php echo($user_image); ?>" alt="...">
-                    <h5 class="title"><?php echo  $db_admin['surname']." ".$db_admin['first_name'];?></h5>
-                  </a>
-                  <p class="description">
-                  <?php    echo "@Voter"; echo  $db_admin['id'];?>   
-                  </p>
-                </div>
-                <p class="description text-center">
-                  "i am a patrioch"
-                </p> 
-              </div>
-               <hr>
-              <div class="button-container"> 
-                <p>follow us on : </p>
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-facebook-f" style="color:royalblue;"></i>
-                </button>
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-twitter" style="color:#00acee;"></i>
-                </button>
-                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                  <i class="fab fa-google-plus-g" style="color:#ff2800;"></i>
-                </button>
-                <p><a href="">I.E.B.C</a>  Kenya , Ensuaring Equity </p>
-              </div>
-             </hr>
-            </div>
-          </div>         -->
         </form>
         </div>
       </div>
