@@ -38,7 +38,7 @@ setup_admin();
        <u> Admin Registration</u>
     </h2>
     </div>
-        <form action="" method="post" >
+        <form action="" method="post" enctype="multipart/form-data" >
             <div class="row">
                 
                 <div class="col-md-2 pr-1">

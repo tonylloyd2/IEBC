@@ -4,20 +4,21 @@ include "../../databases/connectdb.php";
 include  "../../functions.php";
 if (isset($_SESSION['user_id']) ){
   $id = $_SESSION['user_id'];
-  $query_admins = mysqli_query($connectdb,"SELECT * FROM admins where user_id={$id} limit 1 ");
+  $query_admins = mysqli_query($connectdb,"SELECT * FROM admins where user_id='{$id}' limit 1 ");
   $db_admin = mysqli_fetch_assoc($query_admins);
   $user_image = "../../media/profiles/".$db_admin['userprofile'];
 }
   else{
     echo("<script> alert('you are not logged in ');
-    location.replace('http://localhost/html/php_repo/IEBC/dashboard/docs/documentation.php');
+    location.replace('../dashboard/docs/documentation.php');
     </script>
     ");
   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>\
+  <img src="" alt="">
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/iebc.jpg">
@@ -260,7 +261,7 @@ if (isset($_SESSION['user_id']) ){
                 <div class="author">
                   <a href="#">
                     <img class="avatar border-gray" src="<?php echo($user_image); ?>" alt="No imae found">
-                    <h5 class="title"><?php echo  $db_admin['name'];?></h5>
+                    <h5 class="title"><?php echo  $db_admin['first_name'];?></h5>
                   </a>
                   <p class="description">
                   <?php    echo "@admin00";echo $db_admin['id'];?> 

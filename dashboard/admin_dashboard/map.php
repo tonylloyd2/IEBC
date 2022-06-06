@@ -5,7 +5,7 @@ include "../../databases/connectdb.php";
 include  "../../functions.php";
 if (isset($_SESSION['user_id']) ){
   $id = $_SESSION['user_id'];
-  $query_admins = mysqli_query($connectdb,"SELECT * FROM admins where user_id={$id} limit 1 ");
+  $query_admins = mysqli_query($connectdb,"SELECT * FROM admins where user_id='{$id}' limit 1 ");
   $db_admin = mysqli_fetch_assoc($query_admins);
   $user_image = "../../media/profiles/".$db_admin['userprofile'];
   

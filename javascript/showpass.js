@@ -31,15 +31,15 @@ function validate_password(){
     //check empty password field  
   if(password == "" || confirm_password =="" ) {  
       alert("**Fill the password please!");
-      location.replace('http://localhost/html/php_repo/IEBC/password.php');
+      location.replace('../password.php');
   }  
   if(password.length < 5 || password.length > 20 ) {  
        alert("**Password length must be atleast 7 characters and atmost 20 characters" );
-       location.replace('http://localhost/html/php_repo/IEBC/password.php');
+       location.replace('../password.php');
  }
  if (password != confirm_password) {
      alert("passwords didnt match")
-     location.replace('http://localhost/html/php_repo/IEBC/password.php');
+     location.replace('../password.php');
  }
  else{
      alert("registration complete !!")

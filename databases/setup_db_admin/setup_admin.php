@@ -36,55 +36,49 @@ function setup_admin(){
    
     $user_id = random_id(7);
     
-  //   $media_root = "../../media/adminprofiles/";
-  //   $upload_to = $media_root . basename($_FILES["image"]["name"]);
-  //   $image_url = "../../media/adminprofiles/".basename($_FILES["image"]["name"]);
-  //   $uploadOk = 1;
-  //   $imageFileType = strtolower(pathinfo($upload_to,PATHINFO_EXTENSION));
+    $media_root = "../../media/adminprofiles/";
+    $upload_to = $media_root . basename($_FILES["image"]["name"]);
+    $image_url = "../../media/adminprofiles/".basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($upload_to,PATHINFO_EXTENSION));
   
-  //   $check = getimagesize($_FILES["image"]["tmp_name"]);
-  //   if($check !== false) {
-  //     $uploadOk = 1;
-  //   } 
-  //   else {
-  //     $data =["error"=>"File is not an image."];
-  //     $response = json_encode($data);
-  //     echo($response);
-  //     $uploadOk = 0;
-  //   }
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if($check !== false) {
+      $uploadOk = 1;
+    } 
+    else {
+      $data =["error"=>"File is not an image."];
+      $response = json_encode($data);
+      echo($response);
+      $uploadOk = 0;
+    }
   
-  //   if ($_FILES["image"]["size"] > 5000000) {
-  //   $data = ["error" => "Sorry, your file is too large."];
-  //   $response = json_encode($data);
-  //   echo($response);
-  //   $uploadOk = 0;
-  //  }
+    if ($_FILES["image"]["size"] > 5000000) {
+    $data = ["error" => "Sorry, your file is too large."];
+    $response = json_encode($data);
+    echo($response);
+    $uploadOk = 0;
+   }
   
-  // if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"&& $imageFileType != "gif" ) {
-  //   $data = ["error" => "Sorry, only JPG, JPEG, PNG & GIF files are allowed."];
-  //   $response = json_encode($data);
-  //   echo($response);
-  //   $uploadOk = 0;
-  //  }
-  //  if ($uploadOk == 0) {
-  //   $data = ["error" => "Sorry, your file was not uploaded."];
-  //   $response = json_encode($data);
-  //   echo($response);
-  //  } 
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"&& $imageFileType != "gif" ) {
+    $data = ["error" => "Sorry, only JPG, JPEG, PNG & GIF files are allowed."];
+    $response = json_encode($data);
+    echo($response);
+    $uploadOk = 0;
+   }
+   if ($uploadOk == 0) {
+    $data = ["error" => "Sorry, your file was not uploaded."];
+    $response = json_encode($data);
+    echo($response);
+   } 
   
-  //  else {
-    //  if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
-      
-// $host = "localhost";
-// $username = "root";
-// $password = "";
-// $db_name = "iebc";
-// $connectdb = mysqli_connect($host,$username,$password,$db_name);
-
+   else {
+     if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
+     
      
 
-        $query ="INSERT INTO admins(user_id,national_id,email,phone,first_name,last_name,surname,gender,address,postal_code,city,constituency,about)
-                 VALUES('{$user_id}','{$national_id}','{$email}','{$phone}','{$first_name}','{$last_name}','{$surname}',
+        $query ="INSERT INTO admins(userprofile,user_id,national_id,email,phone,first_name,last_name,surname,gender,address,postal_code,city,constituency,about)
+                 VALUES('{$image_url}','{$user_id}','{$national_id}','{$email}','{$phone}','{$first_name}','{$last_name}','{$surname}',
                  '{$gender}','{$address}','{$postal_code}','{$city}','{$constituency}','{$about}')";
       if(mysqli_query($connectdb,$query)){
             $data = [
@@ -105,7 +99,7 @@ function setup_admin(){
         $response = json_encode($data);
         echo($response);
       }                                     
-    // } 
+    } 
     else {
       $data = ["error" => "Sorry, there was an error uploading your file."];
       $response = json_encode($data);
@@ -113,7 +107,7 @@ function setup_admin(){
     }
   }
 
-// }
+}
 
  
 ?>

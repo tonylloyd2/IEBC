@@ -6,7 +6,7 @@ include  "../../functions.php";
 
 if (isset($_SESSION['user_id']) ){
 $id = $_SESSION['user_id'];
-$query_admins = mysqli_query($connectdb,"SELECT * FROM voters  where user_id = $id  limit 1");
+$query_admins = mysqli_query($connectdb,"SELECT * FROM voters  where user_id = '$id'  limit 1");
 $data = mysqli_fetch_assoc($query_admins);
 $user_image = "../../".$data['image'];
 
@@ -71,7 +71,7 @@ else{
           </li>
           <li>
             <a href="./typography.php">
-              <i class="now-ui-icons text_caps-small"></i>
+              <i class="now-ui-icons business_briefcase-24"></i>
               <p>Cast Vote</p>
             </a>
           </li>

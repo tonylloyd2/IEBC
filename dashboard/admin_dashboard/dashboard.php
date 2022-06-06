@@ -7,7 +7,7 @@ include  "../../functions.php";
 if (isset($_SESSION['user_id']) ){
 
 $id = $_SESSION['user_id'];
-$query_admins = mysqli_query($connectdb,"SELECT * FROM admins  where user_id=$id limit 1");
+$query_admins = mysqli_query($connectdb,"SELECT * FROM admins  where user_id='$id' limit 1");
 $data = mysqli_fetch_assoc($query_admins);
 $user_image = "../../media/profiles/".$data['userprofile'];
 }
@@ -223,14 +223,14 @@ else{
                     ?>
                       <tr>
                         <td><img class="avatar border-gray" src="<?php echo($user_image); ?>" alt="..."></td>
-                        <td><?php  echo($data['name']); ?></td>
+                        <td><?php  echo($data['first_name'] . " ".$data['surname']); ?></td>
                         <td><?php  echo($data['national_id']); ?></td>
                         <td><?php  echo($data['email']); ?></td>
                         <td><?php  echo($data['phone']); ?></td>
                         <td><?php  echo($data['gender']); ?></td>
                         <td><?php  echo($data['city']); ?></td>
                         <td><?php  echo($data['postal_code']); ?></td>
-                        <td><?php  echo($data['Salary']); ?></td>
+                        <td><?php  echo($data['salary']); ?></td>
                       </tr>
                        <?php
                        break;

@@ -4,7 +4,7 @@ if (file_exists('databases/connectdb.php')) {
   include ("databases/connectdb.php");
   echo "
   <script>
-  location.replace('http://localhost/html/php_repo/IEBC/dashboard/docs/documentation.php');
+  location.replace('./dashboard/docs/documentation.php');
   </script>
   ";
 }
@@ -21,15 +21,13 @@ else {
         
   echo "<script>
          alert('lets walk you through the installation process : ') ; 
-         location.replace('http://localhost/html/php_repo/IEBC/databases/setup_db_admin');
+         location.replace('./databases/setup_db_admin');
        </script>"; 
 }
 
 }
 
 include ("databases/connectdb.php");    
-
-
 
 function user_register($connectdb){
 
@@ -44,6 +42,11 @@ $county = strtoupper(htmlspecialchars($_POST['county']));
 $constituency = strtoupper(htmlspecialchars($_POST['constituency']));
 $ward = strtoupper(htmlspecialchars($_POST['ward']));
 $polling_station = strtoupper(htmlspecialchars($_POST['polling_station']));
+$phone = strtoupper(htmlspecialchars($_POST['phone']));
+$about = strtoupper(htmlspecialchars($_POST['about']));
+$postal = strtoupper(htmlspecialchars($_POST['postal']));
+$image = $_FILES['image'];
+// echo $image;
 function random_id($length){   
   $alpha = array_merge(range('A','Z'));
   $rand_string = "";
@@ -85,10 +88,9 @@ if(mysqli_num_rows($result_email) > 0){
 }
 
 if($proceed){
-
-  $media_root = "media/profiles/";
+  $media_root = "../../media/profiles/";
   $upload_to = $media_root . basename($_FILES["image"]["name"]);
-  $image_url = "/media/profiles/".basename($_FILES["image"]["name"]);
+  $image_url = "../../media/profiles/".basename($_FILES["image"]["name"]);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($upload_to,PATHINFO_EXTENSION));
   
@@ -127,10 +129,10 @@ if($proceed){
      if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
       
         $query = "INSERT INTO voters(national_id,surname,first_name,last_name,email,gender,date_of_birth,county,constituency,
-        ward,polling_station,image,user_id) 
-        VALUES({$national_id},'{$surname}','{$first_name}','{$last_name}',
+        ward,polling_station,image,user_id,postal,about,phone) 
+        VALUES('{$national_id}','{$surname}','{$first_name}','{$last_name}',
               '{$email}','{$gender}','{$date_of_birth}','{$county}',  '{$constituency}',
-              '{$ward}','{$polling_station}','{$image_url}','{$user_id}')";
+              '{$ward}','{$polling_station}','{$image_url}','{$user_id}','{$postal}','{$about}','{$phone}')";
 
       if(mysqli_query($connectdb,$query)){
             $data = [
@@ -140,7 +142,7 @@ if($proceed){
               echo "<script>
                     alert('registration was successfull');
                     alert('We recommend that you create your password');
-                    location.replace('http://localhost/html/php_repo/IEBC/password.php');
+                    location.replace('./password.php');
                     </script>";
               
       }
@@ -241,7 +243,7 @@ function check_user_login($connectdb){
   // redirect to homepage
   echo "
   <script>
-  location.replace('http://localhost/html/php_repo/IEBC/dashboard/docs/documentation.php');
+  location.replace('./dashboard/docs/documentation.php');
   </script>
   ";
     die;
@@ -260,7 +262,7 @@ function user_login($connectdb){
             if( $user_data['password'] === $password){
                 $_SESSION['user_id'] = $user_data['user_id'];  
                 // echo("ellosrer");
-                header("location:http://localhost/html/php_repo/IEBC/dashboard/user_dashboard/user_dashboard.php");
+                header("location:./dashboard/user_dashboard/user_dashboard.php");
                 die; 
             } 
             else {
@@ -306,7 +308,7 @@ function check_admin_login($connectdb){
 // redirect to homepage
 echo "
  <script>
- location.replace('http://localhost/html/php_repo/IEBC/dashboard/docs/documentation.php');
+ location.replace('./dashboard/docs/documentation.php');
  </script>
  ";
 die;
@@ -325,7 +327,7 @@ function admin_login($connectdb){
             if( $user_data['password'] === $password){
                 $_SESSION['user_id'] = $user_data['user_id'];  
                 // echo("ellosrer");
-                header("location:http://localhost/html/php_repo/IEBC/dashboard/admin_dashboard/dashboard.php");
+                header("location:../dashboard/admin_dashboard/dashboard.php");
                 die; 
             } 
             else {
@@ -389,7 +391,7 @@ function admin_password_update($connectdb){
         // }
         // fwrite($myfile, $write_data);
         // fclose($myfile);
-        header("location:http://localhost/html/php_repo/IEBC/admin_action/login.php");
+        header("location:./login.php");
       }
     }
     else {

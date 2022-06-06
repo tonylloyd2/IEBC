@@ -29,7 +29,7 @@ else {
     echo "
  <script>
  alert('You are not loged in :');
- location.replace('http://localhost/html/php_repo/IEBC/dashboard/docs/documentation.php');
+ location.replace('../dashboard/docs/documentation.php');
  </script>
  ";
 }

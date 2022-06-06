@@ -4,7 +4,7 @@ session_start();
 include "../../databases/connectdb.php";
 include  "../../functions.php";
 if (isset($_SESSION['user_id']) ){
-  $query_admins = mysqli_query($connectdb,"SELECT * FROM voters where user_id={$_SESSION['user_id']} order by national_id ");
+  $query_admins = mysqli_query($connectdb,"SELECT * FROM voters where user_id='{$_SESSION['user_id']}' order by national_id ");
   $db_admin = mysqli_fetch_assoc($query_admins);
   $user_image = "../../".$db_admin['image'];
   }
@@ -71,9 +71,9 @@ if (isset($_SESSION['user_id']) ){
             </a>
           </li>
           
-         <li>
+          <li>
             <a href="./typography.php">
-              <i class="now-ui-icons text_caps-small"></i>
+              <i class="now-ui-icons business_briefcase-24"></i>
               <p>Cast Vote</p>
             </a>
           </li>
