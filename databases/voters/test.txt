@@ -4,3 +4,4 @@ Id   Surname  LastName firstname National_id        Image_path                  
 57 :     EFGWE      WETFWE      AWEEW     32      /media/profiles/217611945_518115843094437_6157111074392937064_n.jpg      W@F.COM      MALE     2004-01-01      2022-05-15 21:16:41      LAMU     LAMU     SSWS     BIIJBN      
 58 :     WE      DCD      W     3232      /media/profiles/dp.jpeg      SD@DE.SD      FEMALE     1998-01-01      2022-05-15 23:01:24      BARINGO     BARINGO CENTRAL SDC     ACEDC      
 2 :     S      V      VSE     1212      /media/prof      R@EF.E      0     2004-04-01      2022-06-05 23:39:12      KITUI     IKUTHA     AWEF     AWEF      
+2 :     S      V      VSE     1212      /media/prof      R@EF.E      0     2004-04-01      2022-06-05 23:39:12      KITUI     IKUTHA     AWEF     AWEF      

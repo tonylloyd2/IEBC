@@ -208,7 +208,7 @@ function user_password_update($connectdb){
         fclose($myfile);
       
 
-        header("location:login.php");
+        header("location:user_login.php");
        }
     }
     else {

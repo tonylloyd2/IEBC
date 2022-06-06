@@ -51,7 +51,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#@Admin">Dashboard</a> <br>
+            <a class="navbar-brand" href="#@Admin">Toggle button</a> <br>
             
           </div>
           <br>
