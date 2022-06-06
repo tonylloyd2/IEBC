@@ -262,7 +262,7 @@ function user_login($connectdb){
             if( $user_data['password'] === $password){
                 $_SESSION['user_id'] = $user_data['user_id'];  
                 // echo("ellosrer");
-                header("location:./dashboard/user_dashboard/user_dashboard.php");
+                header("location:../../dashboard/user_dashboard/user_dashboard.php");
                 die; 
             } 
             else {

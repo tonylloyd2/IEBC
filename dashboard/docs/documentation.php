@@ -67,8 +67,8 @@
           <h3 class="description"> Welcome to the official IEBC site </h3>
           <br />
           <a href="http://localhost/html/php_repo/IEBC/admin_action/login.php" class="btn btn-primary btn-round btn-lg">login as staff</a>
-          <a href="http://localhost/html/php_repo/IEBC/login.php" class="btn btn-primary btn-round btn-lg">login as Voter</a>
-          <a href="http://localhost/html/php_repo/IEBC/signup.php" class="btn btn-primary btn-round btn-lg">Sign up {VOTER}</a>
+          <a href="../../dashboard/general_dashboard/user_login.php" class="btn btn-primary btn-round btn-lg">login as Voter</a>
+          <a href="../../dashboard/general_dashboard/user_signup.php" class="btn btn-primary btn-round btn-lg">Sign up {VOTER}</a>
         <!-- </div> -->
       <!-- </div> -->
     </div>

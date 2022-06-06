@@ -40,7 +40,7 @@ if(isset($_POST['login'])){
         <!-- <canvas> 
       </canvas> -->
       </div>
-      <div class="content" style="padding-bottom:0px;padding-left: 10%;">
+      <div class="content" style="padding-bottom:0px;padding-left:10%;">
         <div class="row">
         <div class="content">
       <form action="" method="post" >
@@ -52,31 +52,24 @@ if(isset($_POST['login'])){
               </div>
               <div class="card-body">
                   <div class="row">
-                    <div class="col-md-4 pr-1">
+                    <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>National id</label>
-                        <input type="text" id="id_number"class="form-control" name="national_id" placeholder="Enter registered ID ">
+                        <input type="text" id="id_number"class="form-control"required name="national_id" placeholder="Enter registered ID ">
                       </div>
                     </div>
-                    <div class="col-md-4 pr-1">
+                    <br>
+                    <div class="col-md-6  pr-1">
                       <div class="form-group">
                         <label>Password</label>
-                        <input type="password"required class="form-control" id="password" name="fpassword" placeholder="PASSWORD">
+                        <input type="password"required class="form-control" id="password" name="password" placeholder="PASSWORD">
                       </div>
                     </div>
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Cornfirm Password</label>
-                        <input type="password"required class="form-control" id="cpassword" name="spassword" placeholder="Re-enter password">
-                      </div>
-                    </div>
+                    
                    </div>
-                   <div class=""  style="padding-left:60%;padding-top: 0px;">
-                     <div class="col-md-12 pr-1"><input type="checkbox" required onclick="show_pass()"><b> Show Password</b>
-                    </div>
-                  </div>
+                   <br>
                   <div class="button" style="padding-left:70%;padding-top: 10px;">
-                      <button type="submit" name="create" style="background-color:green;color:#fff;border-radius:30px;width:80%;">Create:</button>
+                      <button type="submit" name="login" style="background-color:green;color:#fff;border-radius:30px;width:100%;">login</button>
                   </div>
               </div>
 

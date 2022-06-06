@@ -7,7 +7,7 @@ include  "../../functions.php";
 if (isset($_SESSION['user_id']) ){
   $query_admins = mysqli_query($connectdb,"SELECT * FROM voters where user_id='{$_SESSION['user_id']}' order by national_id ");
   $db_admin = mysqli_fetch_assoc($query_admins);
-  $user_image = "../../".$db_admin['image'];
+  $user_image = "".$db_admin['image'];
   }
   else{
     echo("<script> alert('you are not logged in ');
