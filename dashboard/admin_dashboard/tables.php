@@ -39,6 +39,7 @@
   <!-- CSS Files -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/tablecss.css" />
   <style>
     table {
     margin: 0 auto;
@@ -133,6 +134,7 @@
               </button>
             </div>
             <a class="navbar-brand" href="#pablo">Table List</a>
+            
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -189,14 +191,14 @@
       </div>
       <div class="content">
         <div class="row">
-          <div class="col-md-12.5">
+          <div class="col-md-12">
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title"> Voters List </h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table>
+                <table id="tableID" class="display" style="auto">
                     <thead>
                       <tr>
                         <th>Profile  </th>  
@@ -219,8 +221,8 @@
                     ?>
                       <tr>
                         <form action="../../admin_action/update_delete_user.php" method="post">
-                        <td><img class="avatar border-gray" src="<?php echo("../../".$data['image']); ?>" alt="..."></td>
-                        <td><?php  echo($data['national_id']); ?></td>
+                        <td><img class="avatar border-gray" src="<?php echo("".$data['image']); ?>" alt="..."></td>
+                        <td><?php  echo (strtolower($data['national_id'])); ?></td>
                         <td><?php  echo($data['email']); ?></td>
                         <td><?php  echo($data['county']); ?></td>
                          <td width="30px"><?php  echo($data['constituency']); ?></td>
@@ -229,7 +231,7 @@
                         <td>
                           <input type="text" name="national_id" hidden value="<?php echo($data['national_id']); ?>">
                           <button type="submit" style="background-color:green; color:#fff" name="update" >Update</button>
-                          <button type="submit" style="background-color:red; color:#fff" name="delete">Delete</button>
+                          <button type="submit" style="background-color:red; color:#fff" name="delete">Del</button>
                           </form>
                         </td>
                       </tr>
@@ -307,6 +309,13 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script type="text/javascript" src="../../javascript/table.js"></script>
+	<script type="text/javascript" src="../../javascript/tab.js"></script>
+  <script>
+		$(document).ready(function() {
+			$('#tableID').DataTable({ });
+		});
+	</script>
 </body>
 
 </html>

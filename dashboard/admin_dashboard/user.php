@@ -6,7 +6,7 @@ if (isset($_SESSION['user_id']) ){
   $id = $_SESSION['user_id'];
   $query_admins = mysqli_query($connectdb,"SELECT * FROM admins where user_id='{$id}' limit 1 ");
   $db_admin = mysqli_fetch_assoc($query_admins);
-  $user_image = "../../media/profiles/".$db_admin['userprofile'];
+  $user_image = "../../media/adminprofiles/".$db_admin['userprofile'];
 }
   else{
     echo("<script> alert('you are not logged in ');
@@ -17,7 +17,7 @@ if (isset($_SESSION['user_id']) ){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>\
+<head>
   <img src="" alt="">
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">

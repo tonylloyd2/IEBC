@@ -5,11 +5,8 @@
  
 
  
-<link rel="stylesheet" href="tablecss.css" />
- 
-	<script type="text/javascript" src="table.js"></script>
-
- 
+    <link rel="stylesheet" href="tablecss.css" />
+ 	<script type="text/javascript" src="table.js"></script>
 	<script type="text/javascript" src="tab.js"></script>
 </head>
 
@@ -27,6 +24,7 @@
 				<th>Marks Scored</th>
 			</tr>
 		</thead>
+		<!-- 33333333 -->
 		<tbody>
 			<tr>
 				<td>ST1</td>
@@ -144,8 +142,6 @@
 	</table>
 
 	<script>
-
-		 
 		$(document).ready(function() {
 			$('#tableID').DataTable({ });
 		});

@@ -51,40 +51,32 @@ if(isset($_POST['signup'])){
             <div class="card" style="border-radius:10px;border-style: hidden;">           
               <div class="card-header">
                 <h5 class="title">Sign up </h5>
-                <!-- <div class="dropdown" style="padding-left:95%; align-item:center">
-                  <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
-                    <i class="now-ui-icons loader_gear"  ></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right" >
-                    <button class=""  style="width:100% ; color:red ; border:unset ; text-align:start" name="submit">Edit Profile</button>
-                    <button class=""  style="width:100% ; color:red ;border:unset; text-align:start" name="password">Change Password</button>
-                  </div>
-                </div> -->
+               
               </div>
               <div class="card-body">
                   <div class="row">
                     <div class="col-md-3 pr-1">
                       <div class="form-group">
-                        <label>National id</label>
-                        <input type="text" class="form-control"placeholder="national id" name="national_id">
+                        <label id="id_label">National id</label>
+                        <input type="number" required class="form-control"placeholder="national id" id="national_id" name="national_id">
                       </div>
                     </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
                         <label>Phone</label>
-                        <input type="text" class="form-control" placeholder="Phone" name="phone">
+                        <input type="text" required class="form-control" placeholder="Phone" name="phone">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" name="email" placeholder="email">
+                        <input type="email" required class="form-control" name="email" placeholder="email">
                       </div>
                     </div>
                     <div class="col-md-2 px-1">
                       <div class="form-group">
                         <label>Gender</label>
-                        <select name="gender" id="gender" placeholder="Gender"  class="shadow-none form-control form-select"style="border-radius:40px; background-color:#fff; box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);">
+                        <select name="gender" id="gender" required placeholder="Gender"  class="shadow-none form-control form-select"style="border-radius:40px; background-color:#fff; box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);">
                           <option value="Female" style="background-color:#fff">Female</option>
                           <option value="Male"style="background-color:#fff">Male</option>
                           <option value="Male"style="background-color:#fff">Other</option>
@@ -96,26 +88,26 @@ if(isset($_POST['signup'])){
                     <div class="col-md-3 pr-1">
                       <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" class="form-control"name="first_name" placeholder="first name">
+                        <input type="text" class="form-control" required name="first_name" placeholder="first name">
                       </div>
                     </div>
                     <div class="col-md-3 pr-1">
                       <div class="form-group">
                         <label>Last Name</label>
-                        <input type="text" class="form-control"name="last_name" placeholder="last name " >
+                        <input type="text" class="form-control "required name="last_name" placeholder="last name " >
                       </div>
                     </div>
                     <div class="col-md-3 pr-1">
                       <div class="form-group">
                         <label>Surname</label>
-                        <input type="text" class="form-control"name="surname" placeholder="surname" >
+                        <input type="text" class="form-control"name="surname" required placeholder="surname" >
                       </div>
                     </div>
                     
                     <div class="col-md-1 pr-1">
                       <div class="form-group">
                         <label for="image">Profie picture</label><br>
-                        <input type="file" name="image" id="image" placeholder="Profile Picture" accept="image/*" 
+                        <input type="file" name="image" id="image"required placeholder="Profile Picture" accept="image/*" 
                                 class="btn shadow-none btn-outline-primary" style="width:100%" required 
                                 style="border-radius:40px; background-color:lightblue;box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);" alt="seher"/>
                       </div>
@@ -134,7 +126,7 @@ if(isset($_POST['signup'])){
                     <div class="col-md-2 px-1">
                       <div class="form-group">
                       <label for="constituency"  class="form-label">Constituency:</label><br>
-                       <select name="constituency" required id="constituency" class="shadow-none text-uppercase form-select"
+                       <select name="constituency"  required id="constituency" class="shadow-none text-uppercase form-select"
                        style="border-radius:40px;height:35px; background-color:#fff; box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);">
                         <?php 
                         while($constituency = mysqli_fetch_assoc($query_constituency)){
@@ -148,19 +140,19 @@ if(isset($_POST['signup'])){
                     <div class="col-md-3 px-1">
                       <div class="form-group">
                         <label>Ward </label>
-                        <input type="text" class="form-control" placeholder="ward" value="" name="ward">
+                        <input type="text" required class="form-control" placeholder="ward" value="" name="ward">
                       </div>
                     </div>
                     <div class="col-md-2 px-1">
                       <div class="form-group">
                     <label for="date_of_birth" style="color:#fff">Date of Birth:</label>
-                    <input type="date" name="date_of_birth" id="date_of_birth" placeholder="yyyy-mm-dd" min="1900-01-01" max="2004-04-08" class="form-control" required>
+                    <input type="date" required name="date_of_birth" id="date_of_birth" placeholder="yyyy-mm-dd" min="1900-01-01" max="2004-04-08" class="form-control" required>
                     </div>
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
                         <label>Polling station </label>
-                        <input type="text"  class="form-control" placeholder="polling station" name="polling_station" value="">
+                        <input type="text"  class="form-control" required placeholder="polling station" name="polling_station" value="">
                       </div>
                     </div>
                     <div class="col-md-2 pl-1">
@@ -209,6 +201,16 @@ if(isset($_POST['signup'])){
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script>
+    var id  = document.getElementById('national_id').value;
+    let label = document.getElementById("id_label").innerHTML; 
+    if (id < 35000000 || id > 40000000) {
+      //  label = "the national id is not valid";
+        // alert("the national id is inalid");
+     
+     }
+
+  </script>
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js

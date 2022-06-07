@@ -9,7 +9,7 @@ if (isset($_SESSION['user_id']) ){
 $id = $_SESSION['user_id'];
 $query_admins = mysqli_query($connectdb,"SELECT * FROM admins  where user_id='$id' limit 1");
 $data = mysqli_fetch_assoc($query_admins);
-$user_image = "../../media/profiles/".$data['userprofile'];
+$user_image = "../../media/adminprofiles/".$data['userprofile'];
 }
 else{
   echo("<script> alert('you are not logged in ');
