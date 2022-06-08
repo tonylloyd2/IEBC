@@ -231,7 +231,7 @@
                         <td>
                           <input type="text" name="national_id" hidden value="<?php echo($data['national_id']); ?>">
                           <button type="submit" style="background-color:green; color:#fff" name="update" >Update</button>
-                          <button type="submit" style="background-color:red; color:#fff" name="delete">Del</button>
+                          <button type="submit" style="background-color:red; color:#fff" name="delete">Delete</button>
                           </form>
                         </td>
                       </tr>
