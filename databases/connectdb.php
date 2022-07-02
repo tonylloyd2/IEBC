@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "0220";
 $db_name = "iebc";
 
 $connectdb = mysqli_connect($host,$username,$password,$db_name);
