@@ -38,7 +38,7 @@ header("location:index2.php");
                           <input type="password" name="password_db" placeholder="Password :"value="" >
                       </div>
                       <div class="input-field">
-                          <input type="password" name="name_db" placeholder="Database Name">
+                          <input type="" name="name_db" placeholder="Database Name">
                       </div>
                       <div class="input-field">
                           <button class="btn btn-submit" name="continue" onclick="instruct()" type="submit"><i> Continue </i></button>

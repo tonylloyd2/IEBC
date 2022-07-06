@@ -9,7 +9,7 @@ function setup_db(){
 
     $myfile = fopen("../connectdb.php", "a") or die("Unable to open file!");
     $write_data = '
-    <?php
+<?php
 $host = "'.$host.'";
 $username = "'.$username.'";
 $password = "'.$password.'";

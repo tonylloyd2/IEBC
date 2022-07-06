@@ -75,11 +75,15 @@ function setup_admin(){
    else {
      if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
      
-     
+      $password = "";
 
-        $query ="INSERT INTO admins(userprofile,user_id,national_id,email,phone,first_name,last_name,surname,gender,address,postal_code,city,constituency,about)
+        $query ="INSERT INTO admins(
+                       userprofile,user_id,national_id,
+                       email,phone,first_name,last_name,
+                       surname,gender,address,postal_code,
+                       city,constituency,about,password)
                  VALUES('{$image_url}','{$user_id}','{$national_id}','{$email}','{$phone}','{$first_name}','{$last_name}','{$surname}',
-                 '{$gender}','{$address}','{$postal_code}','{$city}','{$constituency}','{$about}')";
+                 '{$gender}','{$address}','{$postal_code}','{$city}','{$constituency}','{$about}' , '{$password}')";
       if(mysqli_query($connectdb,$query)){
             $data = [
                 'success' => 'Voter registered succesfully'
@@ -87,7 +91,7 @@ function setup_admin(){
               $response = json_encode($data);
               echo "<script>
                     alert('registration was successfull');
-                    alert('lets erify your email address ... A verification code has been sent to your email address');
+                    alert('lets verify your email address ... A verification code has been sent to your email address');
                     location.replace('http://localhost/html/php_repo/IEBC/admin_action/password.php');
                     </script>";
               

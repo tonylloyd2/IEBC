@@ -30,12 +30,12 @@
               <p>Sign up</p>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="./typography.php">
               <i class="now-ui-icons business_briefcase-24"></i>
               <p>Cast Vote</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

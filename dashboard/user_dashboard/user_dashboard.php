@@ -8,7 +8,7 @@ if (isset($_SESSION['user_id']) ){
 $id = $_SESSION['user_id'];
 $query_admins = mysqli_query($connectdb,"SELECT * FROM voters  where user_id = '$id'  limit 1");
 $data = mysqli_fetch_assoc($query_admins);
-$user_image = "../../".$data['image'];
+$user_image = "".$data['image'];
 
 }
 else{

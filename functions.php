@@ -127,12 +127,14 @@ if($proceed){
   
    else {
      if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
-      
-        $query = "INSERT INTO voters(national_id,surname,first_name,last_name,email,gender,date_of_birth,county,constituency,
-        ward,polling_station,image,user_id,postal,about,phone) 
+      $password = "";
+        $query = "INSERT INTO voters(national_id,surname,
+        first_name,last_name,email,gender,
+        date_of_birth,county,constituency,
+        ward,polling_station,image,user_id,postal,about,phone,password) 
         VALUES('{$national_id}','{$surname}','{$first_name}','{$last_name}',
               '{$email}','{$gender}','{$date_of_birth}','{$county}',  '{$constituency}',
-              '{$ward}','{$polling_station}','{$image_url}','{$user_id}','{$postal}','{$about}','{$phone}')";
+              '{$ward}','{$polling_station}','{$image_url}','{$user_id}','{$postal}','{$about}','{$phone}' , '{$password}')";
 
       if(mysqli_query($connectdb,$query)){
             $data = [

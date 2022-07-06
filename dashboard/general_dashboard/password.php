@@ -81,9 +81,7 @@ if(isset($_POST['create'])){
                       </div>
                     </div>
                    </div>
-                   <div class=""  style="padding-left:60%;padding-top: 0px;">
-                     <div class="col-md-12 pr-1"><input type="checkbox" required onclick="show_pass()"><b> Show Password</b>
-                    </div>
+                   
                   </div>
                   <div class="button" style="padding-left:70%;padding-top: 10px;">
                       <button type="submit" name="create" style="background-color:green;color:#fff;border-radius:30px;width:80%;">Create:</button>
@@ -93,6 +91,9 @@ if(isset($_POST['create'])){
             </div>
           </div>
         </form>
+        <div class=""  style="padding-left:60%;padding-top: 0px;">
+                     <div class="col-md-12 pr-1"><input type="checkbox" required onclick="show_pass()"><b> Show Password</b>
+                    </div>
         </div>
       </div>
       </div>    
