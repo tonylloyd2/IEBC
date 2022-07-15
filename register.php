@@ -19,7 +19,7 @@ $sql = "INSERT INTO test_table  VALUES ('$username', '$email', '$password')";
 $result = mysqli_query($connectdb,$sql);
 
 
-    if($result = true){
+    if($result){
       echo "<script> 
       alert('registered successfully !!!');
       </script>

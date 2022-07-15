@@ -75,15 +75,15 @@ function setup_admin(){
    else {
      if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_to)) {
      
-      $password = "";
-
+        $password = "";
+        $salary = 0;
         $query ="INSERT INTO admins(
                        userprofile,user_id,national_id,
                        email,phone,first_name,last_name,
                        surname,gender,address,postal_code,
-                       city,constituency,about,password)
+                       city,constituency,about,password , salary)
                  VALUES('{$image_url}','{$user_id}','{$national_id}','{$email}','{$phone}','{$first_name}','{$last_name}','{$surname}',
-                 '{$gender}','{$address}','{$postal_code}','{$city}','{$constituency}','{$about}' , '{$password}')";
+                 '{$gender}','{$address}','{$postal_code}','{$city}','{$constituency}','{$about}' , '{$password}' , '{$salary}')";
       if(mysqli_query($connectdb,$query)){
             $data = [
                 'success' => 'Voter registered succesfully'

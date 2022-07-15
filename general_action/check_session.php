@@ -14,14 +14,6 @@ if (isset($_SESSION['user_id']) ){
     if ($continue && check_user_login($connectdb)) {
         check_user_login($connectdb) ;
     }
- 
-
-// if (true) {
-//     check_admin_login($connectdb);
-// }    
-// if (true) {
-//     check_user_login($connectdb);
-// }
 
 }
 else {

@@ -22,7 +22,7 @@ if (isset($_SESSION['user_id']) ){
       <div class="content">
         <div class="row">
           <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="">
               <div class="card-header">
                 <h5 class="title">Profile</h5>
                 <div class="dropdown" style="padding-left:95%; align-item:center">

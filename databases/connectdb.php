@@ -4,7 +4,7 @@
       
 <?php
 $host = "localhost";
-$username = "root";
+$username = "lloyd";
 $password = "0220";
 $db_name = "iebc";
 

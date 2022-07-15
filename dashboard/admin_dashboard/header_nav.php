@@ -143,12 +143,12 @@
               </div>
             </form>
             <ul class="navbar-nav">
-            
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <!-- <i class="now-ui-icons location_world"></i> -->
-                  <p><em> Quick Actions</em>
-                  <i class="now-ui-icons media-2_sound-wave"></i>
+                  <i class="now-ui-icons media-2_sound-wave" style="background-color:black; color:white;"></i>
+                  <p><em style="background-color:black; color:white;"> Quick Actions</em>
+                  
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -161,17 +161,17 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#lloyd">
-                  <i class="now-ui-icons ui-1_bell-53"></i>
+                  <i class="now-ui-icons ui-1_bell-53"style="background-color:black; color:white;"></i>
                   <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
+                    <span class="d-lg-none d-md-block"style="background-color:black; color:white;">Stats</span>
                   </p>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./user.php">
-                  <i class="now-ui-icons users_single-02"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
+                  <i class="now-ui-icons users_single-02" style="background-color:black; color:white;"></i>
+                  <p style="color:green;">
+                    <span class="d-lg-none d-md-block" style="background-color:black; color:white;">Account</span>
                   </p>
                 </a>
               </li>

@@ -155,19 +155,17 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">
-                  <i class="now-ui-icons media-2_sound-wave"></i>
+                  <i class="now-ui-icons media-2_sound-wave" style="background-color:black; color:white;"></i>
                   <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
+                    <span class="d-lg-none d-md-block"style="background-color:black; color:white;">Stats</span>
                   </p>
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="now-ui-icons location_world"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
-                </a>
+                  <i class="now-ui-icons location_world" style="background-color:black; color:white;"></i>  
+                  <span class="d-lg-none d-md-block" style="background-color:black; color:white;">Quick Actions</span>
+                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="./tables.php" style="background-color:green; color:white;" >Voters table</a>
                   <a class="dropdown-item" href="#" style="background-color:green; color:white;" >Notifications</a>
@@ -198,7 +196,7 @@
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                <table id="tableID" class="display" style="auto">
+                <table id="tableID" class="display" style="grid-auto-columns: auto;">
                     <thead>
                       <tr>
                         <th>Profile  </th>  
