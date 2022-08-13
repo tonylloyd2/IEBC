@@ -97,7 +97,7 @@
       <div class="copyright" id="copyright">
         &copy; <script>
           document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-        </script>, Designed by and Coded by :  <a href="https://www.invisionapp.com" target="_blank">lloyd Tony</a>
+        </script>, Designed by and Coded by :  <a href="#" target="_blank">lloyd Tony</a>
       </div>
     </div>
   </footer>
