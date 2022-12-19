@@ -4,8 +4,8 @@
       
 <?php
 $host = "localhost";
-$username = "lloyd";
-$password = "0220";
+$username = "root";
+$password = "";
 $db_name = "iebc";
 
 $connectdb = mysqli_connect($host,$username,$password,$db_name);
